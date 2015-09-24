@@ -2,16 +2,16 @@
 # Create the milling lmdb inputs
 # N.B. set the path to the imagenet train + val data dirs
 
-EXAMPLE=examples/milling
-DATA=data/milling
-TOOLS=build/tools
+EXAMPLE=/home/yan/code/caffe/examples/milling
+DATA=/home/yan/code/caffe/data/milling
+TOOLS=/home/yan/code/caffe/build/tools
 
-TRAIN_DATA_ROOT=../../../kiosk_machine_learning/deep_learning_training_images
-VAL_DATA_ROOT=../../../kiosk_machine_learning/deep_learning_training_images
+TRAIN_DATA_ROOT=/home/yan/code/kiosk_machine_learning/deep_learning_training_images/
+VAL_DATA_ROOT=/home/yan/code/kiosk_machine_learning/deep_learning_training_images/
 
 # Set RESIZE=true to resize the images to 256x256. Leave as false if images have
 # already been resized using another tool.
-RESIZE=false
+RESIZE=true
 if $RESIZE; then
   RESIZE_HEIGHT=256
   RESIZE_WIDTH=256

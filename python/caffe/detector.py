@@ -71,7 +71,7 @@ class Detector(caffe.Net):
         # Extract windows.
         window_inputs = []
         for image_fname, windows in images_windows:
-            image = caffe.io.load_image(image_fname).astype(np.float32)
+            image = caffe.io.load_image(image_fname,False).astype(np.float32)
             for window in windows:
                 window_inputs.append(self.crop(image, window))
 

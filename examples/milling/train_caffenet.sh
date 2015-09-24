@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-./build/tools/caffe train \
-    --solver=models/bvlc_reference_caffenet/solver.prototxt
+/home/yan/code/caffe/build/tools/caffe train \
+    --solver=/home/yan/code/caffe/models/milling_caffenet/solver.prototxt
