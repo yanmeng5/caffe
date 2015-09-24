@@ -1,0 +1,17 @@
+{
+    "all_milling_groups": {
+        "m1_g": 0,
+        "na_g": 1,
+        "medeco_g": 2,
+        "ar1_g": 3,
+        "kw_g": 4,
+        "sc_s": 5,
+        "y1_g": 6,
+        "co87_g": 7,
+        "ar3_g": 8,
+        "kw_l": 9,
+        "sc_l": 10,
+        "best_g": 11,
+        "multilock": 12
+    }
+}
