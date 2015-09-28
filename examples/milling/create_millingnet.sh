@@ -6,10 +6,10 @@ EXAMPLE=examples/milling
 DATA=data/milling
 TOOLS=build/tools
 
-TRAIN_DATA_ROOT=../kiosk_machine_learning/deep_learning_training_images/
-VAL_DATA_ROOT=../kiosk_machine_learning/deep_learning_training_images/
+TRAIN_DATA_ROOT=/home/yan/code/kiosk_machine_learning/deep_learning_training_images/gray/
+VAL_DATA_ROOT=/home/yan/code/kiosk_machine_learning/deep_learning_training_images/gray/
 
-# Set RESIZE=true to resize the images to 256x256. Leave as false if images have
+# Set RESIZE=true to resize the images to 128x384. Leave as false if images have
 # already been resized using another tool.
 RESIZE=true
 if $RESIZE; then
@@ -39,7 +39,6 @@ echo "Creating train lmdb..."
 GLOG_logtostderr=1 $TOOLS/convert_imageset \
     --resize_height=$RESIZE_HEIGHT \
     --resize_width=$RESIZE_WIDTH \
-    --shuffle \
     --gray=True \
     $TRAIN_DATA_ROOT \
     $DATA/train.txt \
@@ -50,7 +49,6 @@ echo "Creating val lmdb..."
 GLOG_logtostderr=1 $TOOLS/convert_imageset \
     --resize_height=$RESIZE_HEIGHT \
     --resize_width=$RESIZE_WIDTH \
-    --shuffle \
     --gray=True \
     $VAL_DATA_ROOT \
     $DATA/val.txt \
